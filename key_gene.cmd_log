@@ -1,0 +1,16 @@
+xst -intstyle ise -ifn "E:/Encryption/RC4/RC4/key_gene.xst" -ofn "E:/Encryption/RC4/RC4/key_gene.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx150t-fgg676-3 key_gene.ngc key_gene.ngd  
+map -intstyle ise -p xc6slx150t-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o key_gene_map.ncd key_gene.ngd key_gene.pcf 
+par -w -intstyle ise -ol high -mt off key_gene_map.ncd key_gene.ncd key_gene.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml key_gene.twx key_gene.ncd -o key_gene.twr key_gene.pcf 
+xst -intstyle ise -ifn "E:/Encryption/RC4/RC4/key_gene.xst" -ofn "E:/Encryption/RC4/RC4/key_gene.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx150t-fgg676-3 key_gene.ngc key_gene.ngd  
+map -intstyle ise -p xc6slx150t-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o key_gene_map.ncd key_gene.ngd key_gene.pcf 
+par -w -intstyle ise -ol high -mt off key_gene_map.ncd key_gene.ncd key_gene.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml key_gene.twx key_gene.ncd -o key_gene.twr key_gene.pcf 
+xst -intstyle ise -ifn "E:/Encryption/RC4/RC4/key_gene.xst" -ofn "E:/Encryption/RC4/RC4/key_gene.syr" 
+xst -intstyle ise -ifn "E:/Encryption/RC4/RC4/key_gene.xst" -ofn "E:/Encryption/RC4/RC4/key_gene.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx150t-fgg676-3 key_gene.ngc key_gene.ngd  
+map -intstyle ise -p xc6slx150t-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o key_gene_map.ncd key_gene.ngd key_gene.pcf 
+par -w -intstyle ise -ol high -mt off key_gene_map.ncd key_gene.ncd key_gene.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml key_gene.twx key_gene.ncd -o key_gene.twr key_gene.pcf 

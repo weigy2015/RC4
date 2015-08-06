@@ -1,0 +1,3 @@
+xst -intstyle ise -ifn "E:/Encryption/RC4/RC4/RC4.xst" -ofn "E:/Encryption/RC4/RC4/RC4.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx150t-fgg676-3 RC4.ngc RC4.ngd  
+map -intstyle ise -p xc6slx150t-fgg676-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o RC4_map.ncd RC4.ngd RC4.pcf 
