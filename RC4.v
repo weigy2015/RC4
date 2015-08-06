@@ -27,13 +27,39 @@ module RC4(
 	 input data_rvalid,
 	 input data_wready,
 	 output data_wvalid,
-	 input [7:0]  key_in,
-	 input [7:0]  data_in,
-	 output [7:0]  data_out
+	 input[7:0] key_in,
+	 input[7:0] data_in,
+	 output[7:0] data_out
     ); 
 	 
-reg [7:0] data_in;
-reg [7:0] key_in;
+
+parameter INIT = 2'b00,
+	KEY_GENE = 2'b01,
+	ENCODE = 2'b10,
+	DEFAULT = 2'b11;
+
+	reg [1:0] NS;
+
+	reg key_gene_valid;
+	
+	
+	
+	
+	initial begin
+		NS <= INIT;
+	end
+	
+	always @ (posedge clk) begin
+		case(NS)
+			INIT:
+				begin
+					if(key_rvalid) begin
+						key_gene_valid <= 1;
+						NS <= KEY_GENE;
+					end
+			KEY_GENE:
+				begin
+					if()
 
 
 endmodule

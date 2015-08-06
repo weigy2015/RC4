@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2015-08-03T16:10:01</DateModified>
+  <DateModified>2015-08-05T22:46:25</DateModified>
   <ModuleName>RC4</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>E:/Encryption/RC4/RC4/iseconfig/RC4.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>E:/Encryption/RC4/RC4\</ImplementationReportsDirectory>
+  <SavedFilePath>E:/RC4/iseconfig/RC4.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>E:/RC4\</ImplementationReportsDirectory>
   <DateInitialized>2015-08-01T21:46:40</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

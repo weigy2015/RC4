@@ -1,0 +1,67 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+F:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml RC4.twx RC4.ncd -o RC4.twr RC4.pcf
+
+Design file:              RC4.ncd
+Physical constraint file: RC4.pcf
+Device,package,speed:     xc6slx150t,fgg676,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+data_in<0>     |data_out<0>    |    7.173|
+data_in<1>     |data_out<1>    |    6.269|
+data_in<2>     |data_out<2>    |    7.251|
+data_in<3>     |data_out<3>    |    6.853|
+data_in<4>     |data_out<4>    |    7.013|
+data_in<5>     |data_out<5>    |    7.627|
+data_in<6>     |data_out<6>    |    7.075|
+data_in<7>     |data_out<7>    |    6.494|
+key_in<0>      |data_out<0>    |    7.928|
+key_in<1>      |data_out<1>    |    6.970|
+key_in<2>      |data_out<2>    |    7.898|
+key_in<3>      |data_out<3>    |    7.743|
+key_in<4>      |data_out<4>    |    7.897|
+key_in<5>      |data_out<5>    |    7.452|
+key_in<6>      |data_out<6>    |    7.310|
+key_in<7>      |data_out<7>    |    7.438|
+---------------+---------------+---------+
+
+
+Analysis completed Tue Aug 04 01:41:35 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 374 MB
+
+
+
