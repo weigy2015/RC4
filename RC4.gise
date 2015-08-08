@@ -43,7 +43,10 @@
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="key_gene.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="key_gene.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="key_gene.lso"/>
@@ -65,6 +68,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="key_gene.xst"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="key_gene_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="key_gene_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="key_gene_isim_beh.exe"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="key_gene_map.map" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="key_gene_map.mrp" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="key_gene_map.ncd" xil_pn:subbranch="Map"/>
@@ -79,26 +83,67 @@
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="key_gene_summary.xml"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="key_gene_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="key_gene_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_keygene_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_keygene_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="test_keygene_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_keygene_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
-    <file xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1438841589" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1438841589">
+    <transform xil_pn:end_ts="1439020158" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1439020158">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1438845723" xil_pn:in_ck="-4451531051451879400" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1438845723">
+    <transform xil_pn:end_ts="1439038008" xil_pn:in_ck="-5507827941675958525" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1439038008">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="RC4.v"/>
       <outfile xil_pn:name="key_gene.v"/>
+      <outfile xil_pn:name="test_keygene.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1439025660" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-2195076778191244386" xil_pn:start_ts="1439025660">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1439025660" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-7445736003275503780" xil_pn:start_ts="1439025660">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1439020158" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="2507921983485222607" xil_pn:start_ts="1439020158">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1439038008" xil_pn:in_ck="-5507827941675958525" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1439038008">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="RC4.v"/>
+      <outfile xil_pn:name="key_gene.v"/>
+      <outfile xil_pn:name="test_keygene.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1439038014" xil_pn:in_ck="-5507827941675958525" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="3886825667445603611" xil_pn:start_ts="1439038008">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="test_keygene_beh.prj"/>
+      <outfile xil_pn:name="test_keygene_isim_beh.exe"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1439038014" xil_pn:in_ck="-7534455316896059956" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="3844025344509468414" xil_pn:start_ts="1439038014">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="test_keygene_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1438845789" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1438845789">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -128,12 +173,15 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1438873083" xil_pn:in_ck="-4451531051451879400" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="5358074869304631102" xil_pn:start_ts="1438873076">
+    <transform xil_pn:end_ts="1439020027" xil_pn:in_ck="-4451531051451879400" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="5358074869304631102" xil_pn:start_ts="1439020019">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
+      <status xil_pn:value="OutputRemoved"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="key_gene.lso"/>
       <outfile xil_pn:name="key_gene.ngc"/>
@@ -151,18 +199,20 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1438873090" xil_pn:in_ck="1396957978730190748" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-1460502596728692560" xil_pn:start_ts="1438873083">
+    <transform xil_pn:end_ts="1439020032" xil_pn:in_ck="1396957978730190748" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-1460502596728692560" xil_pn:start_ts="1439020027">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="key_gene.bld"/>
       <outfile xil_pn:name="key_gene.ngd"/>
       <outfile xil_pn:name="key_gene_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1438873109" xil_pn:in_ck="3064847493683175710" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="346394261158932323" xil_pn:start_ts="1438873090">
+    <transform xil_pn:end_ts="1439020048" xil_pn:in_ck="3064847493683175710" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="346394261158932323" xil_pn:start_ts="1439020032">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="key_gene.pcf"/>
       <outfile xil_pn:name="key_gene_map.map"/>
@@ -173,9 +223,10 @@
       <outfile xil_pn:name="key_gene_summary.xml"/>
       <outfile xil_pn:name="key_gene_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1438873135" xil_pn:in_ck="8902150635423138311" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-3717135755049403020" xil_pn:start_ts="1438873109">
+    <transform xil_pn:end_ts="1439020073" xil_pn:in_ck="8902150635423138311" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-3717135755049403020" xil_pn:start_ts="1439020048">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
       <outfile xil_pn:name="key_gene.ncd"/>
       <outfile xil_pn:name="key_gene.pad"/>
@@ -187,9 +238,10 @@
       <outfile xil_pn:name="key_gene_pad.txt"/>
       <outfile xil_pn:name="key_gene_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1438873135" xil_pn:in_ck="5568448797476186986" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1438873126">
+    <transform xil_pn:end_ts="1439020073" xil_pn:in_ck="5568448797476186986" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1439020064">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
       <outfile xil_pn:name="key_gene.twr"/>
       <outfile xil_pn:name="key_gene.twx"/>

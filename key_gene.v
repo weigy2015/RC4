@@ -22,9 +22,10 @@ module key_gene(
 input clk,				//时钟
 input rst,			//复位
 input[7:0] key_init,		//初始密钥
-input key_rvalid,			//允许读
+//input key_rvalid,			//允许读
 input[1:0] NS,
-output data_rready		//准备读
+output data_rready,		//准备读
+output[7:0] num
 //output[7:0] key			//输出密钥
     );
 
@@ -37,17 +38,24 @@ reg flag_ex;
 reg[7:0] key[0:255];
 reg[7:0] add;
 
+//wire[7:0] num;
+//wire data_rready;
+
 integer m;
-parameter INIT = 2'b00,KEY_GENE = 2'b01,EN_DE_CODE = 2'b10;
+localparam INIT = 2'b00,KEY_GENE = 2'b01,EN_DE_CODE = 2'b10;
 
 initial begin
 	finish <= 0;
 	for (m = 0;m <256;m = m + 1) begin
 		s[m] <= m;
 	end
+	for (m = 0;m <256;m = m + 1) begin
+			key[m] <= m;
+	end
 	flag_ex <= 0;
 	j <= 0;
 	add <= 0;
+	count <= 0;
 end
 
 always @ (posedge clk or negedge rst) begin
@@ -56,9 +64,13 @@ always @ (posedge clk or negedge rst) begin
 		for (m = 0;m <256;m = m + 1) begin
 			s[m] <= m;
 		end
+		for (m = 0;m <256;m = m + 1) begin
+			key[m] <= m;
+		end
 		flag_ex <= 0;
 		j <= 0;
 		add <= 0;
+		count <= 0;
 	end
 	else begin
 		if(NS == KEY_GENE && count < 257) begin
@@ -77,11 +89,13 @@ always @ (posedge clk or negedge rst) begin
 			s[count-2] <= s[j];
 			s[j] <= s[count-2];
 		end
+		
 		if(finish == 1) begin
 			for (m = 0;m <256;m = m + 1) begin
 				key[m] <= s[m];
 			end
 		end
+		
 		if(NS == EN_DE_CODE) begin
 			for (m = 0;m <256;m = m + 1) begin
 				s[m] <= m;
@@ -94,8 +108,7 @@ always @ (posedge clk or negedge rst) begin
 	end
 end
 
-
 assign data_rready = finish;
-
+assign num = j;
 
 endmodule

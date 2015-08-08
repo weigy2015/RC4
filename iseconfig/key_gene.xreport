@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2015-08-06T22:37:46</DateModified>
+  <DateModified>2015-08-08T17:15:51</DateModified>
   <ModuleName>key_gene</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2015-08-08T15:47:54</SummaryTimeStamp>
   <SavedFilePath>E:/Encryption/RC4/RC4/iseconfig/key_gene.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>E:/Encryption/RC4/RC4</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>E:/Encryption/RC4/RC4\</ImplementationReportsDirectory>
   <DateInitialized>2015-08-06T22:37:45</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
