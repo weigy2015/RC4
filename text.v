@@ -35,6 +35,7 @@ module text;
 	wire [8:0] count;
 	wire [7:0] j;
 	wire flag_ex;
+	wire[7:0] test;
 
 	// Instantiate the Unit Under Test (UUT)
 	key_gene uut (
@@ -45,7 +46,8 @@ module text;
 		.data_rready(data_rready), 
 		.count(count), 
 		.j(j), 
-		.flag_ex(flag_ex)
+		.flag_ex(flag_ex),
+		.test(test)
 	);
 
 	parameter INIT = 2'b00,KEY_GENE = 2'b01,EN_DE_CODE = 2'b10; 

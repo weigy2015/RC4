@@ -77,9 +77,9 @@ always @ (posedge clk or negedge rst) begin
 			flag_ex <= 0;
 			data_rready <= 1;
 		end
-		if(flag_ex) begin
-			s[count-2] <= s[j];
-			s[j] <= s[count-2];
+		if(flag_ex && count-1 != j) begin
+			s[count-1] <= s[j];
+			s[j] <= s[count-1];
 		end
 		
 		if(data_rready == 1) begin
