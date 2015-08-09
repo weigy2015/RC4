@@ -1,19 +1,19 @@
-Running: E:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o E:/Encryption/RC4/RC4/test_keygene_isim_beh.exe -prj E:/Encryption/RC4/RC4/test_keygene_beh.prj work.test_keygene work.glbl 
+Running: E:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o E:/Encryption/RC4/RC4/text_isim_beh.exe -prj E:/Encryption/RC4/RC4/text_beh.prj work.text work.glbl 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
 Analyzing Verilog file "E:/Encryption/RC4/RC4/key_gene.v" into library work
-Analyzing Verilog file "E:/Encryption/RC4/RC4/test_keygene.v" into library work
+Analyzing Verilog file "E:/Encryption/RC4/RC4/text.v" into library work
 Analyzing Verilog file "E:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling module key_gene
-Compiling module test_keygene
+Compiling module text
 Compiling module glbl
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
 Compiled 3 Verilog Units
-Built simulation executable E:/Encryption/RC4/RC4/test_keygene_isim_beh.exe
-Fuse Memory Usage: 27804 KB
-Fuse CPU Usage: 420 ms
+Built simulation executable E:/Encryption/RC4/RC4/text_isim_beh.exe
+Fuse Memory Usage: 27672 KB
+Fuse CPU Usage: 390 ms

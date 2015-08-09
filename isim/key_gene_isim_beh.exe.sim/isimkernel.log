@@ -2,27 +2,27 @@ Command line:
    key_gene_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  51463
+     -socket  28475
 
-Sat Aug 08 17:07:37 2015
+Sun Aug 09 13:46:54 2015
 
 
  Elaboration Time: 0.078001 sec
 
  Current Memory Usage: 667.787 Meg
 
- Total Signals          : 19
- Total Nets             : 34
- Total Signal Drivers   : 7
+ Total Signals          : 17
+ Total Nets             : 52
+ Total Signal Drivers   : 10
  Total Blocks           : 2
  Total Primitive Blocks : 2
- Total Processes        : 10
+ Total Processes        : 13
  Total Traceable Variables  : 29
- Total Scalar Nets and Variables : 4275
+ Total Scalar Nets and Variables : 4293
 
- Total Simulation Time: 0.109201 sec
+ Total Simulation Time: 0.140401 sec
 
  Current Memory Usage: 667.787 Meg
 
-Sat Aug 08 17:11:10 2015
+Sun Aug 09 13:46:58 2015
 
