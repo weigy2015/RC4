@@ -10,7 +10,7 @@ Total CPU time to Xst completion: 0.08 secs
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: key_gene.prj
 
@@ -113,13 +113,14 @@ Parsing module <key_gene>.
 =========================================================================
 
 Elaborating module <key_gene>.
-WARNING:HDLCompiler:413 - "E:\Encryption\RC4\RC4\key_gene.v" Line 47: Result of 9-bit expression is truncated to fit in 8-bit target.
 WARNING:HDLCompiler:413 - "E:\Encryption\RC4\RC4\key_gene.v" Line 50: Result of 9-bit expression is truncated to fit in 8-bit target.
-WARNING:HDLCompiler:413 - "E:\Encryption\RC4\RC4\key_gene.v" Line 61: Result of 9-bit expression is truncated to fit in 8-bit target.
-WARNING:HDLCompiler:413 - "E:\Encryption\RC4\RC4\key_gene.v" Line 64: Result of 9-bit expression is truncated to fit in 8-bit target.
-WARNING:HDLCompiler:413 - "E:\Encryption\RC4\RC4\key_gene.v" Line 72: Result of 10-bit expression is truncated to fit in 9-bit target.
-WARNING:HDLCompiler:413 - "E:\Encryption\RC4\RC4\key_gene.v" Line 93: Result of 9-bit expression is truncated to fit in 8-bit target.
-WARNING:HDLCompiler:1127 - "E:\Encryption\RC4\RC4\key_gene.v" Line 57: Assignment to key ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "E:\Encryption\RC4\RC4\key_gene.v" Line 53: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\Encryption\RC4\RC4\key_gene.v" Line 66: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\Encryption\RC4\RC4\key_gene.v" Line 69: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\Encryption\RC4\RC4\key_gene.v" Line 77: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "E:\Encryption\RC4\RC4\key_gene.v" Line 98: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\Encryption\RC4\RC4\key_gene.v" Line 104: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:1127 - "E:\Encryption\RC4\RC4\key_gene.v" Line 60: Assignment to key ignored, since the identifier is never used
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -127,10 +128,12 @@ WARNING:HDLCompiler:1127 - "E:\Encryption\RC4\RC4\key_gene.v" Line 57: Assignmen
 
 Synthesizing Unit <key_gene>.
     Related source file is "E:\Encryption\RC4\RC4\key_gene.v".
+    Found 8-bit register for signal <test>.
     Found 8-bit register for signal <j>.
+    Found 8-bit register for signal <n>.
     Found 9-bit register for signal <count>.
-    Found 1-bit register for signal <flag_ex>.
     Found 1-bit register for signal <data_rready>.
+    Found 1-bit register for signal <flag_ex>.
     Found 1-bit register for signal <s_255<2047>>.
     Found 1-bit register for signal <s_255<2046>>.
     Found 1-bit register for signal <s_255<2045>>.
@@ -2179,39 +2182,42 @@ Synthesizing Unit <key_gene>.
     Found 1-bit register for signal <s_255<2>>.
     Found 1-bit register for signal <s_255<1>>.
     Found 1-bit register for signal <s_255<0>>.
-    Found 10-bit subtractor for signal <GND_1_o_GND_1_o_sub_11_OUT> created at line 81.
-    Found 9-bit adder for signal <count[8]_GND_1_o_add_2_OUT> created at line 72.
-    Found 8-bit adder for signal <n1346> created at line 73.
-    Found 8-bit adder for signal <j[7]_key_init[7]_add_4_OUT> created at line 73.
-    Found 8-bit 256-to-1 multiplexer for signal <j[7]_s[255][7]_wide_mux_9_OUT> created at line 81.
-    Found 8-bit 256-to-1 multiplexer for signal <GND_1_o_s[255][7]_wide_mux_270_OUT> created at line 82.
-    Found 9-bit comparator greater for signal <count[8]_PWR_1_o_LessThan_2_o> created at line 71
-    Found 32-bit comparator lessequal for signal <n0016> created at line 81
+    Found 10-bit subtractor for signal <GND_1_o_GND_1_o_sub_12_OUT> created at line 86.
+    Found 9-bit adder for signal <count[8]_GND_1_o_add_2_OUT> created at line 77.
+    Found 8-bit adder for signal <n1362> created at line 78.
+    Found 8-bit adder for signal <j[7]_key_init[7]_add_5_OUT> created at line 78.
+    Found 8-bit adder for signal <n[7]_GND_1_o_add_534_OUT> created at line 98.
+    Found 8-bit 256-to-1 multiplexer for signal <n1360> created at line 78.
+    Found 8-bit 256-to-1 multiplexer for signal <j[7]_s[255][7]_wide_mux_10_OUT> created at line 86.
+    Found 8-bit 256-to-1 multiplexer for signal <GND_1_o_s[255][7]_wide_mux_271_OUT> created at line 87.
+    Found 8-bit 256-to-1 multiplexer for signal <n[7]_s[255][7]_wide_mux_533_OUT> created at line 97.
+    Found 9-bit comparator greater for signal <count[8]_PWR_1_o_LessThan_2_o> created at line 76
+    Found 32-bit comparator lessequal for signal <n0017> created at line 86
     Summary:
-	inferred   4 Adder/Subtractor(s).
-	inferred 2067 D-type flip-flop(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred 2083 D-type flip-flop(s).
 	inferred   2 Comparator(s).
-	inferred 516 Multiplexer(s).
+	inferred 518 Multiplexer(s).
 Unit <key_gene> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 4
+# Adders/Subtractors                                   : 5
  10-bit subtractor                                     : 1
- 8-bit adder                                           : 2
+ 8-bit adder                                           : 3
  9-bit adder                                           : 1
-# Registers                                            : 2052
+# Registers                                            : 2054
  1-bit register                                        : 2050
- 8-bit register                                        : 1
+ 8-bit register                                        : 3
  9-bit register                                        : 1
 # Comparators                                          : 2
  32-bit comparator lessequal                           : 1
  9-bit comparator greater                              : 1
-# Multiplexers                                         : 516
+# Multiplexers                                         : 518
  8-bit 2-to-1 multiplexer                              : 513
- 8-bit 256-to-1 multiplexer                            : 2
+ 8-bit 256-to-1 multiplexer                            : 4
  9-bit 2-to-1 multiplexer                              : 1
 
 =========================================================================
@@ -2222,6 +2228,7 @@ Macro Statistics
 
 
 Synthesizing (advanced) Unit <key_gene>.
+The following registers are absorbed into counter <n>: 1 register on signal <n>.
 The following registers are absorbed into counter <count>: 1 register on signal <count>.
 Unit <key_gene> synthesized (advanced).
 
@@ -2232,16 +2239,17 @@ Macro Statistics
 # Adders/Subtractors                                   : 3
  10-bit subtractor                                     : 1
  8-bit adder                                           : 2
-# Counters                                             : 1
+# Counters                                             : 2
+ 8-bit up counter                                      : 1
  9-bit up counter                                      : 1
-# Registers                                            : 2058
- Flip-Flops                                            : 2058
+# Registers                                            : 2066
+ Flip-Flops                                            : 2066
 # Comparators                                          : 2
  32-bit comparator lessequal                           : 1
  9-bit comparator greater                              : 1
-# Multiplexers                                         : 515
+# Multiplexers                                         : 517
  8-bit 2-to-1 multiplexer                              : 513
- 8-bit 256-to-1 multiplexer                            : 2
+ 8-bit 256-to-1 multiplexer                            : 4
 
 =========================================================================
 
@@ -2253,24 +2261,18 @@ Optimizing unit <key_gene> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block key_gene, actual ratio is 7.
-WARNING:Xst:2677 - Node <count_1_29> of sequential type is unconnected in block <key_gene>.
-FlipFlop count_0 has been replicated 32 time(s)
-FlipFlop count_1 has been replicated 31 time(s)
-FlipFlop count_2 has been replicated 4 time(s)
-FlipFlop count_3 has been replicated 3 time(s)
-FlipFlop count_4 has been replicated 1 time(s)
-FlipFlop count_5 has been replicated 1 time(s)
-FlipFlop count_6 has been replicated 1 time(s)
-FlipFlop count_7 has been replicated 2 time(s)
-FlipFlop count_8 has been replicated 1 time(s)
-FlipFlop flag_ex has been replicated 1 time(s)
-FlipFlop j_0 has been replicated 26 time(s)
-FlipFlop j_1 has been replicated 26 time(s)
+Found area constraint ratio of 100 (+ 5) on block key_gene, actual ratio is 10.
+WARNING:Xst:2677 - Node <count_0_45> of sequential type is unconnected in block <key_gene>.
+FlipFlop count_0 has been replicated 53 time(s)
+FlipFlop count_1 has been replicated 52 time(s)
+FlipFlop count_2 has been replicated 14 time(s)
+FlipFlop count_3 has been replicated 8 time(s)
+FlipFlop count_4 has been replicated 2 time(s)
+FlipFlop count_5 has been replicated 2 time(s)
+FlipFlop j_0 has been replicated 45 time(s)
+FlipFlop j_1 has been replicated 39 time(s)
 FlipFlop j_2 has been replicated 13 time(s)
-FlipFlop j_3 has been replicated 9 time(s)
-FlipFlop j_4 has been replicated 1 time(s)
-FlipFlop j_5 has been replicated 1 time(s)
+FlipFlop j_3 has been replicated 6 time(s)
 
 Final Macro Processing ...
 
@@ -2278,8 +2280,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 2219
- Flip-Flops                                            : 2219
+# Registers                                            : 2316
+ Flip-Flops                                            : 2316
 
 =========================================================================
 
@@ -2302,27 +2304,29 @@ Top Level Output File Name         : key_gene.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 25909
+# BELS                             : 8513
 #      GND                         : 1
-#      INV                         : 1
+#      INV                         : 2
+#      LUT1                        : 7
 #      LUT2                        : 3
-#      LUT3                        : 97
-#      LUT4                        : 99
-#      LUT5                        : 8202
-#      LUT6                        : 14610
-#      MUXCY                       : 15
-#      MUXF7                       : 2592
-#      MUXF8                       : 272
-#      XORCY                       : 17
-# FlipFlops/Latches                : 2219
-#      FDC                         : 1027
-#      FDCE                        : 168
+#      LUT3                        : 55
+#      LUT4                        : 216
+#      LUT5                        : 2058
+#      LUT6                        : 4491
+#      MUXCY                       : 22
+#      MUXF7                       : 1088
+#      MUXF8                       : 544
+#      VCC                         : 1
+#      XORCY                       : 25
+# FlipFlops/Latches                : 2316
+#      FDC                         : 1024
+#      FDCE                        : 268
 #      FDP                         : 1024
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 38
+# IO Buffers                       : 46
 #      IBUF                        : 11
-#      OBUF                        : 27
+#      OBUF                        : 35
 
 Device utilization summary:
 ---------------------------
@@ -2331,20 +2335,20 @@ Selected Device : 6slx150tfgg676-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            2219  out of  184304     1%  
- Number of Slice LUTs:                23012  out of  92152    24%  
-    Number used as Logic:             23012  out of  92152    24%  
+ Number of Slice Registers:            2316  out of  184304     1%  
+ Number of Slice LUTs:                 6832  out of  92152     7%  
+    Number used as Logic:              6832  out of  92152     7%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  23113
-   Number with an unused Flip Flop:   20894  out of  23113    90%  
-   Number with an unused LUT:           101  out of  23113     0%  
-   Number of fully used LUT-FF pairs:  2118  out of  23113     9%  
-   Number of unique control sets:         2
+ Number of LUT Flip Flop pairs used:   6992
+   Number with an unused Flip Flop:    4676  out of   6992    66%  
+   Number with an unused LUT:           160  out of   6992     2%  
+   Number of fully used LUT-FF pairs:  2156  out of   6992    30%  
+   Number of unique control sets:         5
 
 IO Utilization: 
- Number of IOs:                          39
- Number of bonded IOBs:                  39  out of    396     9%  
+ Number of IOs:                          47
+ Number of bonded IOBs:                  47  out of    396    11%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -2370,7 +2374,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 2219  |
+clk                                | BUFGP                  | 2316  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -2381,9 +2385,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 6.749ns (Maximum Frequency: 148.169MHz)
-   Minimum input arrival time before clock: 11.222ns
-   Maximum output required time after clock: 6.950ns
+   Minimum period: 6.900ns (Maximum Frequency: 144.921MHz)
+   Minimum input arrival time before clock: 5.812ns
+   Maximum output required time after clock: 5.476ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -2392,36 +2396,37 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 6.749ns (frequency: 148.169MHz)
-  Total number of paths / destination ports: 3421394 / 2387
+  Clock period: 6.900ns (frequency: 144.921MHz)
+  Total number of paths / destination ports: 2412959 / 2583
 -------------------------------------------------------------------------
-Delay:               6.749ns (Levels of Logic = 6)
-  Source:            count_0_1 (FF)
-  Destination:       s_255_2046 (FF)
+Delay:               6.900ns (Levels of Logic = 7)
+  Source:            count_2_14 (FF)
+  Destination:       s_255_2043 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: count_0_1 to s_255_2046
+  Data Path: count_2_14 to s_255_2043
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            14   0.447   1.205  count_0_1 (count_0_1)
-     LUT4:I0->O           19   0.203   1.071  Msub_GND_1_o_GND_1_o_sub_11_OUT_xor<3>11_1 (Msub_GND_1_o_GND_1_o_sub_11_OUT_xor<3>11)
-     MUXF8:S->O            1   0.202   0.808  Mmux_GND_1_o_s[255][7]_wide_mux_270_OUT_8_f8_3 (Mmux_GND_1_o_s[255][7]_wide_mux_270_OUT_8_f84)
-     LUT6:I3->O            1   0.205   0.000  Mmux_GND_1_o_s[255][7]_wide_mux_270_OUT_44 (Mmux_GND_1_o_s[255][7]_wide_mux_270_OUT_44)
-     MUXF7:I1->O           1   0.140   0.000  Mmux_GND_1_o_s[255][7]_wide_mux_270_OUT_3_f7_3 (Mmux_GND_1_o_s[255][7]_wide_mux_270_OUT_3_f74)
-     MUXF8:I1->O         256   0.152   2.066  Mmux_GND_1_o_s[255][7]_wide_mux_270_OUT_2_f8_3 (GND_1_o_s[255][7]_wide_mux_270_OUT<4>)
-     MUXF7:S->O            1   0.148   0.000  s[0][7]_GND_1_o_mux_532_OUT<12> (s[0][7]_GND_1_o_mux_532_OUT<12>)
-     FDP:D                     0.102          s_255_12
+     FDCE:C->Q            14   0.447   1.186  count_2_14 (count_2_14)
+     LUT3:I0->O           20   0.205   1.092  Msub_GND_1_o_GND_1_o_sub_12_OUT_xor<2>11_4 (Msub_GND_1_o_GND_1_o_sub_12_OUT_xor<2>113)
+     MUXF7:S->O            1   0.148   0.000  Mmux_GND_1_o_s[255][7]_wide_mux_271_OUT_11_f7_3 (Mmux_GND_1_o_s[255][7]_wide_mux_271_OUT_11_f74)
+     MUXF8:I1->O           1   0.152   0.808  Mmux_GND_1_o_s[255][7]_wide_mux_271_OUT_10_f8_0 (Mmux_GND_1_o_s[255][7]_wide_mux_271_OUT_10_f81)
+     LUT6:I3->O            1   0.205   0.000  Mmux_GND_1_o_s[255][7]_wide_mux_271_OUT_5 (Mmux_GND_1_o_s[255][7]_wide_mux_271_OUT_5)
+     MUXF7:I0->O           1   0.131   0.000  Mmux_GND_1_o_s[255][7]_wide_mux_271_OUT_3_f7 (Mmux_GND_1_o_s[255][7]_wide_mux_271_OUT_3_f7)
+     MUXF8:I1->O         256   0.152   2.067  Mmux_GND_1_o_s[255][7]_wide_mux_271_OUT_2_f8 (GND_1_o_s[255][7]_wide_mux_271_OUT<0>)
+     LUT6:I5->O            1   0.205   0.000  s[0][7]_GND_1_o_mux_538_OUT<0> (s[0][7]_GND_1_o_mux_538_OUT<0>)
+     FDP:D                     0.102          s_255_0
     ----------------------------------------
-    Total                      6.749ns (1.599ns logic, 5.150ns route)
-                                       (23.7% logic, 76.3% route)
+    Total                      6.900ns (1.747ns logic, 5.153ns route)
+                                       (25.3% logic, 74.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 36454 / 4606
+  Total number of paths / destination ports: 8397 / 4868
 -------------------------------------------------------------------------
-Offset:              11.222ns (Levels of Logic = 5)
+Offset:              5.812ns (Levels of Logic = 3)
   Source:            NS<1> (PAD)
   Destination:       s_255_2046 (FF)
   Destination Clock: clk rising
@@ -2430,21 +2435,19 @@ Offset:              11.222ns (Levels of Logic = 5)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O          8215   1.222   4.042  NS_1_IBUF (NS_1_IBUF)
-     LUT2:I0->O         8192   0.203   4.297  NS[1]_PWR_1_o_equal_532_o<1>1 (NS[1]_PWR_1_o_equal_532_o)
-     LUT6:I0->O            1   0.203   0.808  s[0][7]_GND_1_o_mux_532_OUT<7>_SW0_SW3_G (N14348)
-     LUT6:I3->O            1   0.205   0.000  s[0][7]_GND_1_o_mux_532_OUT<7>_G (N31222)
-     MUXF7:I1->O           1   0.140   0.000  s[0][7]_GND_1_o_mux_532_OUT<7> (s[0][7]_GND_1_o_mux_532_OUT<7>)
-     FDP:D                     0.102          s_255_7
+     IBUF:I->O            23   1.222   1.258  NS_1_IBUF (NS_1_IBUF)
+     LUT2:I0->O         2048   0.203   2.823  NS[1]_PWR_1_o_equal_538_o<1>1 (NS[1]_PWR_1_o_equal_538_o)
+     LUT6:I0->O            1   0.203   0.000  s[0][7]_GND_1_o_mux_538_OUT<8> (s[0][7]_GND_1_o_mux_538_OUT<8>)
+     FDC:D                     0.102          s_255_8
     ----------------------------------------
-    Total                     11.222ns (2.075ns logic, 9.147ns route)
-                                       (18.5% logic, 81.5% route)
+    Total                      5.812ns (1.730ns logic, 4.082ns route)
+                                       (29.8% logic, 70.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 27 / 27
+  Total number of paths / destination ports: 35 / 35
 -------------------------------------------------------------------------
-Offset:              6.950ns (Levels of Logic = 1)
+Offset:              5.476ns (Levels of Logic = 1)
   Source:            flag_ex (FF)
   Destination:       flag_ex (PAD)
   Source Clock:      clk rising
@@ -2453,11 +2456,11 @@ Offset:              6.950ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q           8194   0.447   3.932  flag_ex (flag_ex_OBUF)
+     FDCE:C->Q          2049   0.447   2.458  flag_ex (flag_ex_OBUF)
      OBUF:I->O                 2.571          flag_ex_OBUF (flag_ex)
     ----------------------------------------
-    Total                      6.950ns (3.018ns logic, 3.932ns route)
-                                       (43.4% logic, 56.6% route)
+    Total                      5.476ns (3.018ns logic, 2.458ns route)
+                                       (55.1% logic, 44.9% route)
 
 =========================================================================
 
@@ -2469,20 +2472,20 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    6.749|         |         |         |
+clk            |    6.900|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 152.00 secs
-Total CPU time to Xst completion: 152.15 secs
+Total REAL time to Xst completion: 73.00 secs
+Total CPU time to Xst completion: 73.46 secs
  
 --> 
 
-Total memory usage is 576696 kilobytes
+Total memory usage is 380856 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    8 (   0 filtered)
+Number of warnings :    9 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

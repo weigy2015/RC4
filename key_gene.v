@@ -28,7 +28,8 @@ output reg data_rready,		//×¼±¸¶Á
 output reg[8:0] count,
 output reg[7:0] j,
 output reg flag_ex,
-output[7:0] test
+output reg[7:0] test,
+output reg[7:0] n
 //output[7:0] key			//Êä³öÃÜÔ¿
     );
 
@@ -42,6 +43,8 @@ integer m;
 localparam INIT = 2'b00,KEY_GENE = 2'b01,EN_DE_CODE = 2'b10;
 
 initial begin
+	n <= 0;
+	test <= 0;
 	data_rready <= 0;
 	for (m = 0;m <256;m = m + 1) begin
 		s[m] <= m;
@@ -56,6 +59,8 @@ end
 
 always @ (posedge clk or negedge rst) begin
 	if(!rst) begin
+		n <= 0;
+		test <= 0;
 		data_rready <= 0;
 		for (m = 0;m <256;m = m + 1) begin
 			s[m] <= m;
@@ -70,14 +75,14 @@ always @ (posedge clk or negedge rst) begin
 	else begin
 		if(NS == KEY_GENE && count < 256) begin
 			count <= count + 1;
-			j <= j + count[7:0] + key_init;
+			j <= j + s[count] + key_init;
 			flag_ex <= 1;
 		end
 		if(NS == KEY_GENE && count == 256) begin
 			flag_ex <= 0;
 			data_rready <= 1;
 		end
-		if(flag_ex && count-1 != j) begin
+		if(flag_ex) begin
 			s[count-1] <= s[j];
 			s[j] <= s[count-1];
 		end
@@ -88,6 +93,12 @@ always @ (posedge clk or negedge rst) begin
 			end
 		end
 		
+		if(data_rready == 1) begin
+				test <= s[n];
+				n <= n + 1;
+		end
+		
+
 		if(NS == EN_DE_CODE) begin
 			for (m = 0;m <256;m = m + 1) begin
 				s[m] <= m;
@@ -96,9 +107,9 @@ always @ (posedge clk or negedge rst) begin
 			count <= 0;
 			data_rready <= 0;
 		end
+		
 	end
 end
 
-assign test = s[2];
 
 endmodule

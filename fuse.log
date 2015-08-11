@@ -12,8 +12,8 @@ Compiling module key_gene
 Compiling module text
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
+Waiting for 3 sub-compilation(s) to finish...
 Compiled 3 Verilog Units
 Built simulation executable E:/Encryption/RC4/RC4/text_isim_beh.exe
-Fuse Memory Usage: 27788 KB
-Fuse CPU Usage: 420 ms
+Fuse Memory Usage: 27700 KB
+Fuse CPU Usage: 389 ms

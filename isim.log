@@ -8,4 +8,5 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-Stopped at time : 615 ns :  in File "E:/Encryption/RC4/RC4/text.v" Line 70 
+# run all
+Stopped at time : 1215 ns :  in File "E:/Encryption/RC4/RC4/text.v" Line 72 

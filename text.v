@@ -36,6 +36,7 @@ module text;
 	wire [7:0] j;
 	wire flag_ex;
 	wire[7:0] test;
+	wire[7:0] n;
 
 	// Instantiate the Unit Under Test (UUT)
 	key_gene uut (
@@ -47,7 +48,8 @@ module text;
 		.count(count), 
 		.j(j), 
 		.flag_ex(flag_ex),
-		.test(test)
+		.test(test),
+		.n(n)
 	);
 
 	parameter INIT = 2'b00,KEY_GENE = 2'b01,EN_DE_CODE = 2'b10; 
@@ -65,7 +67,7 @@ module text;
 	initial begin
 		rst = 0;
 		#5 rst = 1;
-		#600 rst = 0;
+		#1200 rst = 0;
 		#10 rst = 1;
 		$stop;
 	end
@@ -73,7 +75,7 @@ module text;
 	initial begin
 		NS = INIT;
 		#10 NS = KEY_GENE;
-		#540 NS = EN_DE_CODE;
+		#1140 NS = EN_DE_CODE;
 	end
 
 	always @ (posedge clk) begin
